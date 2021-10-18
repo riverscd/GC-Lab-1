@@ -1,0 +1,95 @@
+/*
+X-Properly link style.css in the head of the HTML file.
+X-Properly link the “Open Sans” font in the head of the HTML file.
+X-Properly use “Open Sans” in the style.css file.
+X-The background color of the body should be set to #f9fafc.
+X-Use #69696a for the colors that look gray.
+X-Use #000 for colors that look black.
+X-Use #FFF for the “Hire Us” and “Call To Action” text.
+X-Remove text-decoration from anchor tags.
+X-Border-left of description is implemented
+X-Footer is implemented using position fixed
+X-Footer has a background color of: rgba(247, 193, 162, 0.7);
+*/
+
+body{
+    background-color: #f9fafc;
+    font-family: 'Open Sans', sans-serif;
+    height: 200vh;
+}
+
+h1{
+    font-size: small;
+    font-weight: 600;
+}
+
+h2{
+    font-size: x-large;
+    font-weight: 600;
+}
+
+
+.gray{
+    color: #69696a;
+    font-size: small;
+}
+
+.black{
+    color:#000;
+}
+
+ul{
+    padding-inline-start: 0px;
+}
+
+button{
+    background-color: #000;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    width: 100%;
+}
+
+section{
+    border-left: solid #69696a 2px;
+}
+
+p{
+    padding-left: 10px;
+}
+
+a.gray{
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.footer-nav li{
+    display: inline;
+}
+
+footer{
+    position: fixed;
+    bottom:0;
+    left: 0;
+    background-color: rgba(247, 193, 162, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: small;
+    font-weight: 500;
+}
+
+.footer-nav li{
+   flex-direction: row;
+   justify-content: space-around;
+}
