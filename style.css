@@ -1,16 +1,4 @@
-/*
-X-Properly link style.css in the head of the HTML file.
-X-Properly link the “Open Sans” font in the head of the HTML file.
-X-Properly use “Open Sans” in the style.css file.
-X-The background color of the body should be set to #f9fafc.
-X-Use #69696a for the colors that look gray.
-X-Use #000 for colors that look black.
-X-Use #FFF for the “Hire Us” and “Call To Action” text.
-X-Remove text-decoration from anchor tags.
-X-Border-left of description is implemented
-X-Footer is implemented using position fixed
-X-Footer has a background color of: rgba(247, 193, 162, 0.7);
-*/
+
 
 body{
     background-color: #f9fafc;
@@ -21,11 +9,17 @@ body{
 h1{
     font-size: small;
     font-weight: 600;
+    margin-bottom: 2px;
 }
 
 h2{
     font-size: x-large;
     font-weight: 600;
+    margin-bottom: 0px;
+}
+
+h3{
+    margin-left: 10px;
 }
 
 
@@ -38,8 +32,11 @@ h2{
     color:#000;
 }
 
-ul{
-    padding-inline-start: 0px;
+nav ul{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-bottom: 5px;
 }
 
 button{
@@ -64,7 +61,7 @@ p{
     padding-left: 10px;
 }
 
-a.gray{
+a{
     text-decoration: none;
 }
 
@@ -72,8 +69,14 @@ li {
     list-style-type: none;
 }
 
-.footer-nav li{
-    display: inline;
+ul{
+    padding: 0;
+}
+
+.footer-nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 footer{
@@ -89,7 +92,72 @@ footer{
     font-weight: 500;
 }
 
-.footer-nav li{
-   flex-direction: row;
-   justify-content: space-around;
+.footer-nav ul li{
+   margin-right: 10px;
+}
+
+@media only screen and (min-width: 768px){
+
+  header{
+        display:flex;
+        justify-content: space-between;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }   
+
+    nav ul li{
+        margin-right: 10px;
+    }
+
+    main{
+        width: 50%;
+        position: absolute;
+        top: 25%;
+    }
+
+    .hire-button{
+        width: auto;
+        padding: 5px 10px;
+        border-radius: 25px;
+       
+    }
+
+    #large-circle {
+        background: rgba(247, 136, 167, 0.6);
+        border-radius: 50%;
+        width: 125px;
+        height: 125px;
+        position: absolute;
+        right: 60px;
+        top: 25%;
+    }
+
+    #medium-circle {
+        background:  rgba(247, 193, 162, 0.7);
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        right: 10px;
+        top: 37%;
+    }
+
+    #small-circle {
+        background: rgba(207, 130, 213, 0.6);
+        border-radius: 50%;
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        right: 15px;
+        top: 30%;
+    }
 }
